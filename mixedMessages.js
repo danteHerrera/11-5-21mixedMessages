@@ -36,3 +36,6 @@ const randomSentenceGenerator = () => {
 sentenceGen += locationAddFactory('Sydney', ['Opera House', 'Coral Reef', 'Royal Botanic Garden']);
 
 console.log(sentenceGen['New York']);
+
+
+//console.log(`You arrive in ${place} for the first time in your life. You are really excited to go to the ${place1}. In reality you end up going to ${place2}`);
