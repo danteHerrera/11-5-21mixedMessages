@@ -1,4 +1,4 @@
-//My program is a random joke generator
+//My program is a random vacation generator
 
 /* 
 List:
@@ -20,7 +20,7 @@ const sentenceGen = {
             '9/11 Memorial'
         ],
         'Sydney': [
-          'Opera House',
+          'Sydney Opera House',
           'Great Barrier Reef',
           'Botanical Gardens',
           'Sydney Habour Bridge',
@@ -48,18 +48,20 @@ const sentenceGen = {
         this._activities[place] = [];
     },
     addActivity(place, activity) {
-      // let newPlace = place[1:place.length-1]; error for some reason idk why
-      //console.log(newPlace);
-        for (let city in this._places) {
+        let newPlace = place
+        //console.log(newPlace);
+        for (let city in this._activities) {
             if (place === city) {
-                console.log('Place is valid.');
+                console.log('Your place is valid.');
                 for (let attraction in this._activites) {
                     if (activity === attraction) {
                         console.log('Activity already added');
                         return '.';
                     }
                 }
-                this._activites.place.push(activity);
+                //console.log(this.activities[place]);
+                this.activities[newPlace] = this.activities[newPlace].concat(activity);
+                //console.log(this.activities[place]);
                 console.log('Attraction(s) have been added');
             }
         }
@@ -89,16 +91,12 @@ const sentenceGen = {
 /*
 TESTS
 --------------------------
-*/
-
-//sentenceGen.addPlace('hello');
-sentenceGen.addActivity('Sydney', ['Nothin']);
-
+*//*
+sentenceGen.addPlace('hello');
+sentenceGen.addActivity('hello', ['something random']);
 console.log(sentenceGen.places);
 console.log(sentenceGen.activities);
-//console.log(sentenceGen.randomSentence()); Works if city and activity matches :(
-//console.log(sentenceGen['New York']);
+console.log(sentenceGen.randomSentence()); Works if city and activity matches :(
+console.log(sentenceGen['New York']);
 console.log(sentenceGen.randomSentence()); 
-
-
-//console.log(`You arrive in ${place} for the first time in your life. You are really excited to go to the ${activity1}. In reality you end up going to ${activity2}`);
+*/
